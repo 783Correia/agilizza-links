@@ -26,14 +26,19 @@
   -webkit-font-smoothing: antialiased;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  position: relative;
-  overflow-x: hidden;
 }
 
 /* Stunning Animated Background */
@@ -81,6 +86,7 @@ body::after {
   flex-direction: column;
   gap: 2.5rem;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 /* Animations */
