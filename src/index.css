@@ -248,6 +248,31 @@ body::after {
   background: linear-gradient(90deg, var(--glass-border), transparent);
 }
 
+/* Scroll Hint */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--brand-green);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+  font-weight: 500;
+  animation: pulse-horizontal 2s infinite ease-in-out;
+}
+
+@keyframes pulse-horizontal {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
 /* Premium Carousel Layout */
 .product-carousel {
   display: flex;
@@ -385,20 +410,25 @@ body::after {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
-  padding: 1rem;
-  background: transparent;
-  color: var(--text-main);
+  padding: 1.1rem 1rem;
+  background: rgba(255, 230, 0, 0.05);
+  /* very subtle yellow */
+  color: #fde047;
+  /* yellow */
   text-decoration: none;
   border-radius: 100px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 230, 0, 0.4);
+  /* yellow border */
+  text-align: center;
 }
 
 .see-all-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 230, 0, 0.15);
+  border-color: rgba(255, 230, 0, 0.8);
+  transform: translateY(-2px);
 }
 
 .mt-4 {

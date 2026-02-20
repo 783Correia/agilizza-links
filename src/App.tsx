@@ -1,4 +1,4 @@
-import { ExternalLink, ShoppingBag, ArrowRight } from 'lucide-react';
+import { ExternalLink, ShoppingBag, ArrowRight, ArrowLeftRight } from 'lucide-react';
 import { PROFILE_DATA, PRODUCTS } from './data';
 import type { Product } from './data';
 import './index.css';
@@ -44,6 +44,11 @@ function App() {
           <div className="section-line"></div>
         </div>
 
+        <div className="scroll-hint">
+          <ArrowLeftRight size={14} className="scroll-hint-icon" />
+          <span>Deslize para ver mais</span>
+        </div>
+
         {/* Horizontal Carousel */}
         <div className="product-carousel hide-scrollbar">
           {PRODUCTS.map((product: Product, index: number) => (
@@ -81,7 +86,7 @@ function App() {
           rel="noopener noreferrer"
           className="see-all-btn mt-4 animate-in delay-3"
         >
-          <span>Ver todos os produtos no Mercado Livre</span>
+          <span>Ver todos no Mercado Livre</span>
           <ArrowRight size={16} strokeWidth={2.5} />
         </a>
       </section>
