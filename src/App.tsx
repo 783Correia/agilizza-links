@@ -44,15 +44,16 @@ function App() {
           <div className="section-line"></div>
         </div>
 
-        <div className="product-list">
+        {/* Horizontal Carousel */}
+        <div className="product-carousel hide-scrollbar">
           {PRODUCTS.map((product: Product, index: number) => (
             <a
               key={product.id}
               href={product.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="product-card animate-in"
-              style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+              className="carousel-card animate-in"
+              style={{ animationDelay: `${0.3 + (index * 0.05)}s` }}
             >
               <div className="product-img-wrapper">
                 <img
@@ -66,19 +67,23 @@ function App() {
               <div className="product-info">
                 <h3 className="product-title">{product.title}</h3>
                 <div className="price-row">
-                  <span className="product-price">{product.price}</span>
-                  <span className={`platform-badge ${product.platform}`}>
-                    {product.platform === 'shopee' ? 'Shopee' : 'Mercado Livre'}
-                  </span>
+                  <span className="product-price">{product.price.replace('R$', '').trim()}</span>
                 </div>
-              </div>
-
-              <div className="action-icon">
-                <ArrowRight size={18} strokeWidth={2.5} />
               </div>
             </a>
           ))}
         </div>
+
+        {/* Ver Todos Button */}
+        <a
+          href="https://www.mercadolivre.com.br/social/eduardofauste/lists/c5c643c2-1c23-40a1-b9d1-45b91f649921?matt_tool=24809446&forceInApp=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="see-all-btn mt-4 animate-in delay-3"
+        >
+          <span>Ver todos os produtos no Mercado Livre</span>
+          <ArrowRight size={16} strokeWidth={2.5} />
+        </a>
       </section>
 
       {/* Footer */}
