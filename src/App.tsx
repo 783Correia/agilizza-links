@@ -23,7 +23,7 @@ function WhatsAppGlyph({ size = 22 }: { size?: number }) {
 
 const ICONS: Record<LinkVariant, React.ReactNode> = {
   mercadolivre: <ShoppingBag size={26} strokeWidth={2} />,
-  loja: <Store size={26} strokeWidth={2} />,
+  shopee: <Store size={26} strokeWidth={2} />,
   amazon: <Package size={26} strokeWidth={2} />,
   whatsapp: <WhatsAppGlyph size={26} />,
 };

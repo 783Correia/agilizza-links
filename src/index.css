@@ -19,6 +19,9 @@
   --amazon: #E8A33D;
   --amazon-glow: rgba(232, 163, 61, 0.14);
 
+  --shopee: #EE4D2D;
+  --shopee-glow: rgba(238, 77, 45, 0.14);
+
   --whatsapp: #25D366;
   --whatsapp-glow: rgba(37, 211, 102, 0.16);
 }
@@ -370,12 +373,12 @@ a { color: inherit; }
   box-shadow: 0 16px 40px -18px var(--yellow-glow);
 }
 
-/* Loja Agilizza */
-.link-card--loja .link-card__icon { color: var(--yellow); }
-.link-card--loja:hover,
-.link-card--loja:focus-visible {
-  border-color: var(--border-strong);
-  box-shadow: 0 14px 34px -18px rgba(255, 255, 255, 0.08);
+/* Shopee */
+.link-card--shopee .link-card__icon { color: var(--shopee); }
+.link-card--shopee:hover,
+.link-card--shopee:focus-visible {
+  border-color: rgba(238, 77, 45, 0.45);
+  box-shadow: 0 14px 34px -18px var(--shopee-glow);
 }
 
 /* Amazon */

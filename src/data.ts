@@ -1,4 +1,4 @@
-export type LinkVariant = "mercadolivre" | "loja" | "amazon" | "whatsapp";
+export type LinkVariant = "mercadolivre" | "shopee" | "amazon" | "whatsapp";
 
 export interface LinkCard {
   id: string;
@@ -41,13 +41,13 @@ export const MAIN_LINKS: LinkCard[] = [
     variant: "mercadolivre",
   },
   {
-    id: "loja",
+    id: "shopee",
     eyebrow: "Minha loja",
-    title: "Loja Agilizza",
+    title: "Agilizza na Shopee",
     description: "Todos os produtos selecionados em um só lugar.",
     url: "https://collshp.com/agilizza?view=storefront",
     cta: "Visitar loja",
-    variant: "loja",
+    variant: "shopee",
   },
   {
     id: "amazon",
